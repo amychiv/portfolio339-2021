@@ -8,7 +8,7 @@ document.querySelector(".menu_icon").addEventListener("click", function() {
   count += 1;
   if (count % 2 != 0) {
     document.getElementById("dropdown").className = "newclass"
-    document.getElementById("main-order-button").style.visibility = "hidden";
+    document.getElementById("main-order-button").style.display = "none";
   }
   else {
     document.getElementById("dropdown").className = "oldclass"
@@ -16,6 +16,8 @@ document.querySelector(".menu_icon").addEventListener("click", function() {
   }
   console.log("Menu should appear and disappear");
 });
+
+
 
 
 
