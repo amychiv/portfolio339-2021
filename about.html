@@ -12,13 +12,11 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-214285714-1"></script>
         <script>
-         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-214285714-1');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-214285714-1');
         </script>
-
         <title> About Us & Contact | Neramtitra Thai Cuisine</title>
     </head>
     <header> 
@@ -51,44 +49,67 @@
                 <li><a href = "menu.html">Menu</a></li>
                 <li><a href = "https://menupages.com/neramitra-thai-cuisine/2200-i-crystal-dr-arlington?utm_source=eat24hrs.com&utm_medium=grubhub-owned-delivery-properties&utm_campaign=growth_redirect-eat24whitelabel">Order Online</a></li>
                 <li><a href = "gallery.html">Gallery</a></li>
-                <li><a href = "about.html" id = "current_about_larger">About Us & Contact</a></li>
+                <li><a href = "about.html" id = "current_about_larger">About & Contact</a></li>
             </ul>
         </nav>
-        <div class= "main">
-            <div class ="main-about-image">
-               <img src="images/gallery/patio.jpg" alt="Neramitra wall decor"/>
-               <div class = "about-us-header">
-                       <a id = "main-order-button" href = "#skip">About Us</a>
-               </div>
-           </div>
-       <div class= "description">
-           <h1 id = "skip"> Neramitra Thai Cuisine</h1>
-               <p> A cornerstone in the Arlington community, recognized for its outstanding Thai cuisine, excellent service and friendly staff.<br>
-                <br>
-                Our Thai restaurant is known for its modern interpretation of classic dishes and its insistence on only using high quality fresh ingredients.</p>
-       </div> 
-       <div class= "menu">
-           <div class ="menu-image">
-               <img src="images/decor.jpg" alt="Neramitra Patio"/>
-               <div class ="menu-button">
-                       <a href = "#contact_skip">Contact Us</a>
-               </div>
-           </div>
-       </div>
-       <div class="hours"> 
-               <h2 id = "contact_skip" >Hours & Location</h2> 
-                   <p>Mon – Thurs: 11:00 am – 9:30 pm <br/>
-                       Fri: 11:00 am – 10:00 pm <br/>
-                       Sat: 12:00 pm – 10:00 pm <br/>
-                       Sun: 12:00 pm – 9:30 pm </p>
-               <h2>Address</h2> 
-               <a href = "https://www.google.com/maps/place/Neramitra+Thai+Cuisine/@38.8546708,-77.0585387,15z/data=!3m2!4b1!5s0x89b7b72f331803b7:0x7edf0a3adffa41c8!4m5!3m4!1s0x89b7b717f307519d:0x68b188810a7311cd!8m2!3d38.8546544!4d-77.0497839">2200-I Crystal Drive <br/>
-                   Arlington, VA, 22202</a>
-                <h2>Phone</h2>
-                    <p id = "phone">+1 703-413-8886</p>
-                
-                <h2 id = "message">Message Us</h2>
-                    <p>[Inserting contact form here]</p>
+        <div class= "about_background">
+            <div class = 'about_foreground'>
+                <div class= "main">
+                    <div class ="main-about-image">
+                    <img src="images/patio.jpg" alt="Neramitra wall decor"/>
+                    <div class = "about-us-header">
+                            <a id = "main-order-button" href = "#skip">About Us</a>
+                    </div>
+                </div>
+                <div class= "description">
+                    <h1 id = "skip"> Neramitra Thai Cuisine</h1>
+                        <p> A cornerstone in the Arlington community, recognized for its outstanding Thai cuisine, excellent service and friendly staff.<br>
+                            <br>
+                            Our Thai restaurant is known for its modern interpretation of classic dishes and its insistence on only using high quality fresh ingredients.</p>
+                </div> 
+                <div class= "menu">
+                    <div class ="menu-image">
+                        <img src="images/decor.jpg" alt="Neramitra Patio"/>
+                        <div class ="menu-button">
+                                <a href = "#contact_skip">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hours"> 
+                    <h2 id = "contact_skip" >Hours & Location</h2> 
+                        <p>Mon – Thurs: 11:00 am – 9:30 pm <br/>
+                                Fri: 11:00 am – 10:00 pm <br/>
+                                Sat: 12:00 pm – 10:00 pm <br/>
+                                Sun: 12:00 pm – 9:30 pm </p>
+                    <h3>Address</h3> 
+                    <a href = "https://www.google.com/maps/place/Neramitra+Thai+Cuisine/@38.8546708,-77.0585387,15z/data=!3m2!4b1!5s0x89b7b72f331803b7:0x7edf0a3adffa41c8!4m5!3m4!1s0x89b7b717f307519d:0x68b188810a7311cd!8m2!3d38.8546544!4d-77.0497839">2200-I Crystal Drive <br/>
+                            Arlington, VA, 22202</a>
+                        <h3>Phone</h3>
+                            <p id = "phone">+1 703-413-8886</p>
+                            <h2 id = "message">Message Us</h2>
+                            <div class="container">
+                                <form action="https://formspree.io/f/xeqnjypr"
+                                method="POST">
+                            
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name">
+                            
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Your last name">
+                            
+                                <label for="email">E-mail</label>
+                                <input type="text" id="email" name="email" placeholder="E-mail address">
+                            
+                                <label for="subject">Message</label>
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                            
+                                <input type="submit" value="Submit">
+                            
+                                </form>
+                            </div>
+                </div>
+            </div>
+        </div>
     </main>
         <footer>
         <p> Website Redesigned by Amy Chivavibul <br/>
