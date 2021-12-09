@@ -757,4 +757,11 @@ input[type=submit]:hover {
     transition: 0s; 
   }
 
+  .index_foreground, .main-image > img, .menu-image > img, .main-about-image > img, .gallery_foreground, #gallery > img, .description {
+    animation: none;
+  }
+  
+  .menu_body, #gallery_body, .about_body, .index_body {
+    background-attachment: initial;
+  }
 }
