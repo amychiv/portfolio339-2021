@@ -5,7 +5,7 @@ body {
   background-color: white;
 }
 
-.menu_body, #gallery_body, .about_body{
+.menu_body, #gallery_body{
   background-image: url("../images/wall.jpeg");
   background-attachment: fixed;
   background-position: center;
@@ -118,13 +118,13 @@ footer p {
 }
 
 /* First section of homepage */
-.main-image > img, .main-about-image > img {
+.main-image > img, .main > .main-about-image > img {
   display: flex;
   position: relative;
   width: 100vw;
   height: 400px;
   object-fit: cover;
-  z-index: -1;
+  z-index: 1;
   filter: brightness(70%);
 }
 
@@ -200,7 +200,7 @@ footer p {
   width: 100vw;
   height: 400px;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0;
   filter: brightness(70%);
 }
 
@@ -275,7 +275,7 @@ footer p {
   width: 100vw;
   height: 400px;
   object-fit: cover;
-  z-index: -1;
+  z-index: 2;
   filter: brightness(80%);
 }
 
@@ -310,6 +310,7 @@ footer p {
 #phone {
   padding: 0px;
 }
+
 /* Image gallery with using grid */
 #gallery {
   display: grid;
@@ -327,13 +328,13 @@ footer p {
   padding-bottom: 10px;
 }
 
-.gallery_background, .about_background { 
+.gallery_background { 
   background-color:rgba(255, 255, 255, 0.7);
   margin-top: 20px;
   padding: 5px;
 }
 
-.gallery_foreground, .about_foreground{
+.gallery_foreground{
   background-color:white;
   width: 90vw;
   margin-top: 30px;
@@ -415,6 +416,10 @@ footer p {
 .menu_main_background > p {
   align-items: center;
   font-size: 15px;
+}
+
+.about_foreground {
+  z-index: 0;
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -633,7 +638,7 @@ input[type=submit]:hover {
   }
 
   /* Index */
-  .index_body {
+  .index_body, .about_body {
     background-image: url("../images/wall.jpeg");
     background-attachment: fixed;
     background-position: center;
@@ -642,7 +647,7 @@ input[type=submit]:hover {
     margin-bottom: 5px;
   }
 
-  .main_background {
+  .main_background, .about_background {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 5px;
     margin-left: 30px;
@@ -651,7 +656,7 @@ input[type=submit]:hover {
     margin-top: 20px;
   }
 
-  .index_foreground {
+  .index_foreground, .about_foreground {
     background-color: white;
     margin: 20px;
   }
@@ -663,6 +668,8 @@ input[type=submit]:hover {
     margin-right: auto;
     padding-top: 30px;
     width: 85vw;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   .contact-image > img {
@@ -670,11 +677,11 @@ input[type=submit]:hover {
     padding-top: 0px;
   }
 
-  .main-image {
+  .main-image, .main-about-image {
     display: grid;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     grid-template-columns: 85vw;
   }
 
